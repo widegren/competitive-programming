@@ -13,7 +13,7 @@ public class Problem3 {
 		while (BigInteger.valueOf(i).compareTo(num) < 0) {
 			factors = num.mod(k);
 			if (BigInteger.valueOf(0).compareTo(factors) == 0 && isPrime(i)) {
-				System.out.println(i + "");
+				System.out.println(i);
 			}
 			i++;
 			k = k.add(BigInteger.ONE);
