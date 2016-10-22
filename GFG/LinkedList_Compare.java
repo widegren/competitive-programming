@@ -4,11 +4,17 @@ import java.util.Scanner;
 
 class Node {
 	char data;
+	int intdata;
 	Node next;
 
 	// Constructor to create a new node
 	Node(char d) {
 		data = d;
+		next = null;
+	}
+	
+	Node(int d) {
+		intdata = d;
 		next = null;
 	}
 }
@@ -70,6 +76,7 @@ public class LinkedList_Compare {
 			System.out.println(value);
 			t--;
 		}
+		sc.close();
 	}
 }
 
@@ -89,5 +96,39 @@ class GfG {
 			}
 		}
 		return result;
+	}
+	Node addTwoLists(Node first, Node second) {
+		int sum = 0, carry = 0;
+		Node tmp = null, res = null, prev = null;
+		
+		while(first != null || second != null){
+			sum = carry + (first != null ? first.intdata : 0)
+                    + (second != null ? second.intdata : 0);
+			
+			carry = (sum >= 10) ? 1 : 0;
+			sum = sum % 10;
+			tmp = new Node(sum);
+			
+			if (res == null) {
+                res = tmp;
+            } else // If this is not the first node then connect it to the rest.
+            {
+                prev.next = tmp;
+            }
+			
+			prev = tmp;
+			
+			if (first != null) {
+                first = first.next;
+            }
+            if (second != null) {
+                second = second.next;
+            }
+		}
+		if (carry > 0) {
+            tmp.next = new Node(carry);
+        }
+ 
+        return res;
 	}
 }
