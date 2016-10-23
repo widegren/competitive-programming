@@ -26,21 +26,49 @@ public class Add_LinkedList {
 		head = new_node;
 	}
 
+	public void addToTheLast(Node node) {
+		if (head == null) {
+			head = node;
+		} else {
+			Node temp = head;
+			while (temp.next != null)
+				temp = temp.next;
+
+			temp.next = node;
+		}
+	}
+
+	Node reverse(Node head, int k) {
+		Node tmp = head, tmp_next = null, tmp_prev = null;
+		int i = 0;
+		while (tmp != null && i < k) {
+			tmp_next = tmp.next;
+			tmp.next = tmp_prev;
+			tmp_prev = tmp;
+			tmp = tmp_next;
+			i++;
+		}
+		if (tmp_next != null){
+			head.next = reverse(tmp_next, k);
+		}
+		return tmp_prev;
+	}
+
 	void merge(Add_LinkedList q) {
 		Node p_curr = head, q_curr = q.head;
-        Node p_next, q_next;
-        
-        while(p_curr != null && q_curr != null){
-        	p_next = p_curr.next;
-        	q_next = q_curr.next;
-        	
-        	q_curr.next = p_next;
-        	p_curr.next = q_curr;
-        	
-        	p_curr = p_next;
-        	q_curr = q_next;
-        }
-        q.head = q_curr;
+		Node p_next, q_next;
+
+		while (p_curr != null && q_curr != null) {
+			p_next = p_curr.next;
+			q_next = q_curr.next;
+
+			q_curr.next = p_next;
+			p_curr.next = q_curr;
+
+			p_curr = p_next;
+			q_curr = q_next;
+		}
+		q.head = q_curr;
 	}
 
 	public static void main(String[] args) {
