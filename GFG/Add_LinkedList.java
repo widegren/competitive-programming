@@ -10,7 +10,7 @@ public class Add_LinkedList {
 			System.out.print(head.intdata + " ");
 			head = head.next;
 		}
-		// System.out.println("");
+		System.out.println("");
 	}
 
 	public void push(int new_data) {
@@ -24,6 +24,23 @@ public class Add_LinkedList {
 
 		/* 4. Move the head to point to new Node */
 		head = new_node;
+	}
+
+	void merge(Add_LinkedList q) {
+		Node p_curr = head, q_curr = q.head;
+        Node p_next, q_next;
+        
+        while(p_curr != null && q_curr != null){
+        	p_next = p_curr.next;
+        	q_next = q_curr.next;
+        	
+        	q_curr.next = p_next;
+        	p_curr.next = q_curr;
+        	
+        	p_curr = p_next;
+        	q_curr = q_next;
+        }
+        q.head = q_curr;
 	}
 
 	public static void main(String[] args) {
