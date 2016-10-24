@@ -3,8 +3,8 @@ package GFG;
 public class Merge_LinkedList {
 	public static void main(String args[])
     {
-        Add_LinkedList llist1 = new Add_LinkedList();
-        Add_LinkedList llist2 = new Add_LinkedList();
+        LinkedList llist1 = new LinkedList();
+        LinkedList llist2 = new LinkedList();
         llist1.push(3);
         llist1.push(2);
         llist1.push(1);

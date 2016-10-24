@@ -12,7 +12,7 @@ public class Reverse_LinkedList {
 		int t = sc.nextInt();
 		while (t > 0) {
 			int n = sc.nextInt();
-			Add_LinkedList llist = new Add_LinkedList();
+			LinkedList llist = new LinkedList();
 			// int n=Integer.parseInt(br.readLine());
 			int a1 = sc.nextInt();
 			Node head = new Node(a1);
