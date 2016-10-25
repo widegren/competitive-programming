@@ -1,9 +1,9 @@
-package GFG;
+package gfg;
 
 import java.util.Scanner;
 
 public class LinkedList {
-	Node head;
+	static Node head;
 
 	void printList(Node head) {
 		while (head != null) {
@@ -52,6 +52,14 @@ public class LinkedList {
 			head.next = reverse(tmp_next, k);
 		}
 		return tmp_prev;
+	}
+	
+	int detectAndRemoveLoop(Node node) {
+		return node.intdata;
+	}
+	
+	void removeLoop(Node loop, Node curr) {
+		
 	}
 
 	boolean isPresent(Node head, int data) {
@@ -107,25 +115,26 @@ public class LinkedList {
 		q.head = q_curr;
 	}
 
+//	// Driver method for adding two lists
 	// public static void main(String[] args) {
 	// Scanner sc = new Scanner(System.in);
 	// int T = sc.nextInt();
 	// while (T > 0) {
 	// int n1 = sc.nextInt();
-	// Add_LinkedList list1 = new Add_LinkedList();
+	// LinkedList list1 = new LinkedList();
 	// for (int i = 1; i <= n1; i++) {
 	// int a = sc.nextInt();
 	// list1.push(a);
 	// }
 	//
 	// int n2 = sc.nextInt();
-	// Add_LinkedList list2 = new Add_LinkedList();
+	// LinkedList list2 = new LinkedList();
 	// for (int i = 0; i < n2; i++) {
 	// int b = sc.nextInt();
 	// list2.push(b);
 	// }
 	//
-	// Add_LinkedList list3 = new Add_LinkedList();
+	// LinkedList list3 = new LinkedList();
 	// GfG g = new GfG();
 	// Node rs = g.addTwoLists(list1.head, list2.head);
 	// list3.printList(rs);
@@ -135,37 +144,53 @@ public class LinkedList {
 	// sc.close();
 	// }
 
-	public static void main(String args[]) {
-		LinkedList llist1 = new LinkedList();
-		LinkedList llist2 = new LinkedList();
-		LinkedList unin = new LinkedList();
-		LinkedList intersecn = new LinkedList();
-
-		/* create a linked lits 10->15->5->20 */
-		llist1.push(20);
-		llist1.push(4);
-		llist1.push(15);
-		llist1.push(10);
-
-		/* create a linked lits 8->4->2->10 */
-		llist2.push(10);
-		llist2.push(2);
-		llist2.push(4);
-		llist2.push(8);
-
-		intersecn.getIntersection(llist1.head, llist2.head);
-		unin.getUnion(llist1.head, llist2.head);
-
-		System.out.println("First List is");
-		llist1.printList(llist1.head);
-
-		System.out.println("Second List is");
-		llist2.printList(llist2.head);
-
-		System.out.println("Intersection List is");
-		intersecn.printList(intersecn.head);
-
-		System.out.println("Union List is");
-		unin.printList(unin.head);
-	}
+//	// Driver method for union and intersect of two linked lists
+//	public static void main(String args[]) {
+//		LinkedList llist1 = new LinkedList();
+//		LinkedList llist2 = new LinkedList();
+//		LinkedList unin = new LinkedList();
+//		LinkedList intersecn = new LinkedList();
+//
+//		/* create a linked lits 10->15->5->20 */
+//		llist1.push(20);
+//		llist1.push(4);
+//		llist1.push(15);
+//		llist1.push(10);
+//
+//		/* create a linked lits 8->4->2->10 */
+//		llist2.push(10);
+//		llist2.push(2);
+//		llist2.push(4);
+//		llist2.push(8);
+//
+//		intersecn.getIntersection(llist1.head, llist2.head);
+//		unin.getUnion(llist1.head, llist2.head);
+//
+//		System.out.println("First List is");
+//		llist1.printList(llist1.head);
+//
+//		System.out.println("Second List is");
+//		llist2.printList(llist2.head);
+//
+//		System.out.println("Intersection List is");
+//		intersecn.printList(intersecn.head);
+//
+//		System.out.println("Union List is");
+//		unin.printList(unin.head);
+//	}
+	
+	public static void main(String[] args) {
+        LinkedList list = new LinkedList();
+        list.head = new Node(50);
+        list.head.next = new Node(20);
+        list.head.next.next = new Node(15);
+        list.head.next.next.next = new Node(4);
+        list.head.next.next.next.next = new Node(10);
+ 
+        // Creating a loop for testing 
+        head.next.next.next.next.next = head.next.next;
+        list.detectAndRemoveLoop(head);
+        System.out.println("Linked List after removing loop : ");
+        list.printList(head);
+    }
 }

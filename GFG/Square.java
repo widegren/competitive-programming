@@ -1,4 +1,4 @@
-package GFG;
+package gfg;
 
 import java.awt.Point;
 import java.util.Scanner;
