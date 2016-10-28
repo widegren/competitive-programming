@@ -5,7 +5,7 @@ import java.util.Scanner;
 class Node {
 	char data;
 	int intdata;
-	Node next;
+	Node next, left, right;
 
 	// Constructor to create a new node
 	Node(char d) {
@@ -16,6 +16,7 @@ class Node {
 	Node(int d) {
 		intdata = d;
 		next = null;
+		left = right = null;
 	}
 }
 
