@@ -1,6 +1,6 @@
 package gfg;
 
-import java.util.Scanner;
+import java.util.*;
 
 public class LinkedList {
 	static Node head;
@@ -53,13 +53,13 @@ public class LinkedList {
 		}
 		return tmp_prev;
 	}
-	
+
 	int detectAndRemoveLoop(Node node) {
 		return node.intdata;
 	}
-	
+
 	void removeLoop(Node loop, Node curr) {
-		
+
 	}
 
 	boolean isPresent(Node head, int data) {
@@ -80,8 +80,8 @@ public class LinkedList {
 			push(t1.intdata);
 			t1 = t1.next;
 		}
-		while (t2 != null){
-			if(!isPresent(head,t2.intdata)){
+		while (t2 != null) {
+			if (!isPresent(head, t2.intdata)) {
 				push(t2.intdata);
 			}
 			t2 = t2.next;
@@ -90,12 +90,12 @@ public class LinkedList {
 
 	void getIntersection(Node head1, Node head2) {
 		Node t1 = head1;
-		
+
 		while (t1 != null) {
-            if (isPresent(head2, t1.intdata))
-                push(t1.intdata);
-            t1 = t1.next;
-        }
+			if (isPresent(head2, t1.intdata))
+				push(t1.intdata);
+			t1 = t1.next;
+		}
 	}
 
 	void merge(LinkedList q) {
@@ -115,7 +115,30 @@ public class LinkedList {
 		q.head = q_curr;
 	}
 
-//	// Driver method for adding two lists
+	public long multiplyTwoLists(Node l1, Node l2) {
+		long nr1 = 0, nr2 = 0;
+
+		while (l1 != null || l2 != null) {
+			if (l1 != null) {
+				nr1 = nr1 * 10 + l1.intdata;
+				if(nr1 > 1000000007)
+					nr1 = nr1 % 1000000007;
+				l1 = l1.next;
+			}
+			if (l2 != null) {
+				nr2 = nr2 * 10 + l2.intdata;
+				if(nr2 > 1000000007)
+					nr2 = nr2 % 1000000007;
+				l2 = l2.next;
+			}
+		}
+		long prod = nr1*nr2;
+		if(prod > 1000000007)
+			prod = prod % 1000000007;
+		return prod;
+	}
+
+	// // Driver method for adding two lists
 	// public static void main(String[] args) {
 	// Scanner sc = new Scanner(System.in);
 	// int T = sc.nextInt();
@@ -144,53 +167,53 @@ public class LinkedList {
 	// sc.close();
 	// }
 
-//	// Driver method for union and intersect of two linked lists
-//	public static void main(String args[]) {
-//		LinkedList llist1 = new LinkedList();
-//		LinkedList llist2 = new LinkedList();
-//		LinkedList unin = new LinkedList();
-//		LinkedList intersecn = new LinkedList();
-//
-//		/* create a linked lits 10->15->5->20 */
-//		llist1.push(20);
-//		llist1.push(4);
-//		llist1.push(15);
-//		llist1.push(10);
-//
-//		/* create a linked lits 8->4->2->10 */
-//		llist2.push(10);
-//		llist2.push(2);
-//		llist2.push(4);
-//		llist2.push(8);
-//
-//		intersecn.getIntersection(llist1.head, llist2.head);
-//		unin.getUnion(llist1.head, llist2.head);
-//
-//		System.out.println("First List is");
-//		llist1.printList(llist1.head);
-//
-//		System.out.println("Second List is");
-//		llist2.printList(llist2.head);
-//
-//		System.out.println("Intersection List is");
-//		intersecn.printList(intersecn.head);
-//
-//		System.out.println("Union List is");
-//		unin.printList(unin.head);
-//	}
-	
+	// // Driver method for union and intersect of two linked lists
+	// public static void main(String args[]) {
+	// LinkedList llist1 = new LinkedList();
+	// LinkedList llist2 = new LinkedList();
+	// LinkedList unin = new LinkedList();
+	// LinkedList intersecn = new LinkedList();
+	//
+	// /* create a linked lits 10->15->5->20 */
+	// llist1.push(20);
+	// llist1.push(4);
+	// llist1.push(15);
+	// llist1.push(10);
+	//
+	// /* create a linked lits 8->4->2->10 */
+	// llist2.push(10);
+	// llist2.push(2);
+	// llist2.push(4);
+	// llist2.push(8);
+	//
+	// intersecn.getIntersection(llist1.head, llist2.head);
+	// unin.getUnion(llist1.head, llist2.head);
+	//
+	// System.out.println("First List is");
+	// llist1.printList(llist1.head);
+	//
+	// System.out.println("Second List is");
+	// llist2.printList(llist2.head);
+	//
+	// System.out.println("Intersection List is");
+	// intersecn.printList(intersecn.head);
+	//
+	// System.out.println("Union List is");
+	// unin.printList(unin.head);
+	// }
+
 	public static void main(String[] args) {
-        LinkedList list = new LinkedList();
-        list.head = new Node(50);
-        list.head.next = new Node(20);
-        list.head.next.next = new Node(15);
-        list.head.next.next.next = new Node(4);
-        list.head.next.next.next.next = new Node(10);
- 
-        // Creating a loop for testing 
-        head.next.next.next.next.next = head.next.next;
-        list.detectAndRemoveLoop(head);
-        System.out.println("Linked List after removing loop : ");
-        list.printList(head);
-    }
+		LinkedList list = new LinkedList();
+		list.head = new Node(50);
+		list.head.next = new Node(20);
+		list.head.next.next = new Node(15);
+		list.head.next.next.next = new Node(4);
+		list.head.next.next.next.next = new Node(10);
+
+		// Creating a loop for testing
+		head.next.next.next.next.next = head.next.next;
+		list.detectAndRemoveLoop(head);
+		System.out.println("Linked List after removing loop : ");
+		list.printList(head);
+	}
 }
