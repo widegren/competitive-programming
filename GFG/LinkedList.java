@@ -121,21 +121,32 @@ public class LinkedList {
 		while (l1 != null || l2 != null) {
 			if (l1 != null) {
 				nr1 = nr1 * 10 + l1.intdata;
-				if(nr1 > 1000000007)
+				if (nr1 > 1000000007)
 					nr1 = nr1 % 1000000007;
 				l1 = l1.next;
 			}
 			if (l2 != null) {
 				nr2 = nr2 * 10 + l2.intdata;
-				if(nr2 > 1000000007)
+				if (nr2 > 1000000007)
 					nr2 = nr2 % 1000000007;
 				l2 = l2.next;
 			}
 		}
-		long prod = nr1*nr2;
-		if(prod > 1000000007)
+		long prod = nr1 * nr2;
+		if (prod > 1000000007)
 			prod = prod % 1000000007;
 		return prod;
+	}
+
+	Node reverse(Node head) {
+		Node prev = null, tmp = null;
+		while (head != null) {
+			tmp = head.next;
+			head.next = prev;
+			prev = head;
+			head = tmp;
+		}
+		return prev;
 	}
 
 	// // Driver method for adding two lists
