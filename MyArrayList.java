@@ -87,7 +87,7 @@ public class MyArrayList<AnyType> implements Iterable<AnyType> {
 		return new ArrayListIterator();
 	}
 
-	public class ArrayListIterator implements java.util.Iterator<AnyType> {
+	private class ArrayListIterator implements java.util.Iterator<AnyType> {
 		private int current = 0;
 
 		public boolean hasNext() {
