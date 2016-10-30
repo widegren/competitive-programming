@@ -7,6 +7,7 @@ package Chapter2;
  * given only access to that node.
  */
 public class Q3 {
+	@SuppressWarnings("static-access")
 	public static void main(String[] args) {
 		Q1 list = new Q1();
 		list.head = new Node(50);
