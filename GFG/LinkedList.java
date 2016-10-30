@@ -54,12 +54,17 @@ public class LinkedList {
 		return tmp_prev;
 	}
 
-	int detectAndRemoveLoop(Node node) {
-		return node.intdata;
-	}
+	void detectAndRemoveLoop(Node node) {
+		Node slow = node, fast = node.next;
 
-	void removeLoop(Node loop, Node curr) {
-
+		while (fast != null && fast.next != null) {
+			if (slow == fast.next) {
+				fast.next.next = null;
+				break;
+			}
+			slow = slow.next;
+			fast = fast.next.next;
+		}
 	}
 
 	boolean isPresent(Node head, int data) {
