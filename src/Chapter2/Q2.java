@@ -9,7 +9,8 @@ package Chapter2;
  */
 public class Q2 {
 	Node head;
-	public static void main(String[] args){
+
+	public static void main(String[] args) {
 		Q2 list = new Q2();
 		list.head = new Node(50);
 		list.head.next = new Node(20);
@@ -18,11 +19,11 @@ public class Q2 {
 		list.head.next.next.next.next = new Node(10);
 		list.head.next.next.next.next.next = new Node(4);
 		list.head.next.next.next.next.next.next = new Node(6);
-		
-		kthToLast(list.head,2);
-		}
-	
-	public static int kthToLast(Node head, int n){
+
+		kthToLast(list.head, 2);
+	}
+
+	public static int kthToLast(Node head, int n) {
 		if (n == 0 || head == null) {
 			return 0;
 		}
@@ -32,15 +33,16 @@ public class Q2 {
 		}
 		return k;
 	}
-	
+
 	public static Node nthToLast(Node head, int n) {
 		Node p1 = head;
 		Node p2 = head;
-		
-		if (n <= 0) return null;
-		
-		// Move p2 n nodes into the list.  Keep n1 in the same position.
-		for (int i = 0; i < n - 1; i++) { 
+
+		if (n <= 0)
+			return null;
+
+		// Move p2 n nodes into the list. Keep n1 in the same position.
+		for (int i = 0; i < n - 1; i++) {
 			if (p2 == null) {
 				return null; // Error: list is too small.
 			}
@@ -49,13 +51,13 @@ public class Q2 {
 		if (p2 == null) { // Another error check.
 			return null;
 		}
-		
-		// Move them at the same pace.  When p2 hits the end, 
+
+		// Move them at the same pace. When p2 hits the end,
 		// p1 will be at the right element.
 		while (p2.next != null) {
 			p1 = p1.next;
 			p2 = p2.next;
-	  	}
-	  	return p1;
+		}
+		return p1;
 	}
 }
