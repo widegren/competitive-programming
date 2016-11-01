@@ -10,14 +10,12 @@ public class DFS {
 		// Mark the current node as visited and enqueue it
 		visited[s] = true;
 		System.out.print(s + " ");
-		
-		if(adj.length > s){
-			Iterator<Integer> i = adj[s].listIterator();
-			while (i.hasNext()){
-	            int n = i.next();
-	            if (!visited[n])
-	            	DFS(n, adj, visited);
-	        }
+
+		if (adj.length > s) {
+			for (int i : adj[s]) {
+				if (!visited[i])
+					DFS(i, adj, visited);
+			}
 		}
 	}
 
@@ -25,7 +23,6 @@ public class DFS {
 		LinkedList<Integer> adj[]; // Adjacency Lists
 		boolean[] visited = new boolean[100];
 
-		// Input the number of test cases you want to run
 		Scanner sc = new Scanner(System.in);
 
 		// Start node

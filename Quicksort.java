@@ -14,6 +14,7 @@ public class Quicksort {
 
 	public void quickSort(int low, int high){
 		int i = low, j = high, pivot = numbers[low+(high-low)/2];
+		System.out.println(pivot);
 		while(i<=j){
 			while(numbers[i]<pivot){
 				i++;
@@ -25,6 +26,7 @@ public class Quicksort {
 				int temp = numbers[i];
 		        numbers[i] = numbers[j];
 		        numbers[j] = temp;
+		        System.out.println(i + " " + j);
                 i++;
                 j--;
             }

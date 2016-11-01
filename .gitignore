@@ -9,3 +9,5 @@
 *.project
 .classpath
 /Hashtable.class
+
+gfg/Permutations.class
