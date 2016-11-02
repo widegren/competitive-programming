@@ -81,25 +81,37 @@ public class BT_Connect_Adjacent_Node {
 
 		}
 	}
-	
-	static void connect(Node root){
+
+	static void connect(Node root) {
 		// Base case
-        if (root == null)
-            return;
-  
-        // Set the nextRight pointer for p's left child
-        if (root.left != null)
-            root.left.nextRight = root.right;
-  
-        // Set the nextRight pointer for p's right child
-        // p->nextRight will be NULL if p is the right most child 
-        // at its level
-        if (root.right != null) 
-            root.right.nextRight = (root.nextRight != null) ? 
-                                         root.nextRight.left : null;
-  
-        // Set nextRight for other nodes in pre order fashion
-        connect(root.left);
-        connect(root.right);
+		if (root == null)
+			return;
+
+		// Set the nextRight pointer for p's left child
+		if (root.left != null)
+			root.left.nextRight = root.right;
+
+		// Set the nextRight pointer for p's right child
+		// p->nextRight will be NULL if p is the right most child
+		// at its level
+		if (root.right != null)
+			root.right.nextRight = (root.nextRight != null) ? root.nextRight.left : null;
+
+		// Set nextRight for other nodes in pre order fashion
+		connect(root.left);
+		connect(root.right);
+	}
+
+	/**
+	 * Count Leaves in Binary Tree
+	 * http://www.practice.geeksforgeeks.org/problem-page.php?pid=700145
+	 */
+	int countLeaves(Node node) {
+		if (node == null)
+			return 0;
+		else if (node.left == null && node.right == null)
+			return 1;
+		else
+			return countLeaves(node.left) + countLeaves(node.right);
 	}
 }
