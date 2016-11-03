@@ -114,4 +114,20 @@ public class BT_Connect_Adjacent_Node {
 		else
 			return countLeaves(node.left) + countLeaves(node.right);
 	}
+
+	/**
+	 * Search a node in BST
+	 * http://www.practice.geeksforgeeks.org/problem-page.php?pid=700349
+	 * 
+	 * @param root
+	 * @param x
+	 * @return
+	 */
+	boolean search(Node root, int x) {
+		if (root == null)
+			return false;
+		if (root.data == x)
+			return true;
+		return search(root.left, x) || search(root.right, x);
+	}
 }
