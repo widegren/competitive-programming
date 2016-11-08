@@ -1,10 +1,10 @@
 
 public class Problem5 {
-	
+
 	public static void main(String arg[]) {
 		problem5();
 	}
-	
+
 	public static void problem5() {
 		for (int i = 20;; i++) {
 			if (divisible(i)) {

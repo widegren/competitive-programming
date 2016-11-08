@@ -1,10 +1,10 @@
 
 public class Problem6 {
-	
+
 	public static void main(String arg[]) {
 		problem6();
 	}
-	
+
 	public static void problem6() {
 		int res = 0, res1 = 0, square;
 		for (int i = 1; i < 101; i++) {

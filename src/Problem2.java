@@ -1,11 +1,11 @@
 import java.util.ArrayList;
 
 public class Problem2 {
-	
+
 	public static void main(String arg[]) {
 		problem2();
 	}
-	
+
 	public static void problem2() {
 		ArrayList<Integer> list = new ArrayList<Integer>();
 		int result = 0, i = 0, fib = 1;

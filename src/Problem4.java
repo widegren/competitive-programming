@@ -1,10 +1,10 @@
 
 public class Problem4 {
-	
+
 	public static void main(String arg[]) {
 		problem4();
 	}
-	
+
 	public static void problem4() {
 		int prod, res = 0;
 		for (int i = 10; i < 1000; i++) {
