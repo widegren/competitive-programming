@@ -14,6 +14,7 @@ public class Day9 {
 			System.out.println(ex.toString());
 		}
 		System.out.println(new Day9().decompress(everything).length());
+		System.out.println(new Day9().solve(everything, true));
 	}
 
 	public String decompress(String str) {
@@ -31,7 +32,6 @@ public class Day9 {
 				reps = Integer.parseInt(parts[1]);
 				if (chars > str.substring(j + 1).length()) {
 					i = j;
-					System.out.println("break");
 					break;
 				}
 				String s = str.substring(j + 1, j + 1 + chars);
@@ -44,5 +44,25 @@ public class Day9 {
 			}
 		}
 		return sb.toString();
+	}
+
+	public long solve(String s, boolean partTwo) {
+		long cnt = 0;
+		char[] s_arr = s.toCharArray();
+		for (int i = 0; i < s_arr.length; i++) {
+			if (s_arr[i] == ' ') {
+				continue;
+			} else if (s_arr[i] == '(') {
+				int end = s.indexOf(')', i);
+				int howMuch = Integer.valueOf(s.substring(i + 1, end).split("x")[0]);
+				int times = Integer.valueOf(s.substring(i + 1, end).split("x")[1]);
+				String repeat = s.substring(end + 1, end + 1 + howMuch);
+				cnt += times * ((partTwo) ? solve(repeat, partTwo) : repeat.length());
+				i = end + howMuch;
+			} else {
+				cnt++;
+			}
+		}
+		return cnt;
 	}
 }
