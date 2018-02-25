@@ -1,8 +1,8 @@
 
 *.class
 
-*.class
+.idea/
 
-*.class
+.settings/
 
-*.class
+*.iml
