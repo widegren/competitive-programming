@@ -30,14 +30,10 @@ function main () {
   var s = 'HackerRank '
 
   // Declare second integer, double, and String variables.
-  var secondInteger = 1
-  var secondDouble = 1.0
-  var secondStr = '1'
-
   // Read and save an integer, double, and String to your variables.
-  secondInteger = parseInt(readLine())
-  secondDouble = parseFloat(readLine())
-  secondStr = readLine()
+  var secondInteger = parseInt(readLine())
+  var secondDouble = parseFloat(readLine())
+  var secondStr = readLine()
 
   // Print the sum of both integer variables on a new line.
   console.log(i + secondInteger)
