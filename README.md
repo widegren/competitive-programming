@@ -12,5 +12,7 @@ My solutions for different programming problems, from different platforms:
 
 ### 2019 Goals
 
-- [ ] 365 Days of Code.
-- [ ] 10 ProjectEuler problems in Scala.
+- [ ] 365 days of code.
+- [ ] 10 project euler problems in Scala.
+- [ ] 10 project euler problems in Hasell.
+- [ ] 10 project euler problems in Rust.
