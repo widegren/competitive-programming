@@ -1,5 +1,10 @@
 'use strict'
 
+/**
+ * Javascript (Node.js) solution for {@link https://www.hackerrank.com/challenges/30-operators/problem Day 2: Operators}
+ * @author Emelie Widegren <emeliewide@gmail.com>
+ */
+
 process.stdin.resume()
 process.stdin.setEncoding('utf-8')
 
@@ -23,18 +28,18 @@ function readLine () {
 }
 
 // Complete the solve function below.
-function solve (meal_cost, tip_percent, tax_percent) {
-  const tip = tip_percent * meal_cost * 0.01
-  const tax = tax_percent * meal_cost * 0.01
-  console.log(Math.round(meal_cost + tip + tax))
+function solve (mealCost, tipPercent, taxPercent) {
+  const tip = tipPercent * mealCost * 0.01
+  const tax = taxPercent * mealCost * 0.01
+  console.log(Math.round(+tip + tax))
 }
 
 function main () {
-  const meal_cost = parseFloat(readLine())
+  const mealCost = parseFloat(readLine())
 
-  const tip_percent = parseInt(readLine(), 10)
+  const tipPercent = parseInt(readLine(), 10)
 
-  const tax_percent = parseInt(readLine(), 10)
+  const taxPercent = parseInt(readLine(), 10)
 
-  solve(meal_cost, tip_percent, tax_percent)
+  solve(mealCost, tipPercent, taxPercent)
 }
