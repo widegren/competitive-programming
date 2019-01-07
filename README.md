@@ -3,6 +3,7 @@
 My solutions to different programming problems, from different platforms:
 
 - [advent of code](https://adventofcode.com/)
+- [leetcode](https://leetcode.com/)
 - [project euler](https://projecteuler.net/)
 - [geeks for geeks](https://www.geeksforgeeks.org/)
 - [hackerrank](https://hackerrank.com/)
