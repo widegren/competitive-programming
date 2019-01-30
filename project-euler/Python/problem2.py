@@ -11,12 +11,12 @@ def even_fibonacci():
     Returns the sum of the even-valued terms below four million.
     """
     first_term, second_term = 1, 1
-    sum = 0
+    result = 0
     while second_term < 4000000:
         first_term, second_term = second_term, first_term + second_term
         if second_term % 2 == 0:
-            sum += second_term
-    return sum
+            result += second_term
+    return result
 
 
 if __name__ == '__main__':
