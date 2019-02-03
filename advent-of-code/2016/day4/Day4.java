@@ -9,7 +9,7 @@ public class Day4 {
   public static void main(String[] args) {
     String everything = "";
     try {
-      BufferedReader br = new BufferedReader(new FileReader("input4.txt"));
+      BufferedReader br = new BufferedReader(new FileReader("input.txt"));
       StringBuilder sb = new StringBuilder();
       String line = br.readLine();
 

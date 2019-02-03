@@ -3,7 +3,7 @@ import java.util.*;
 
 public class Day7 {
   public static void main(String[] args) throws Exception {
-    BufferedReader br = new BufferedReader(new FileReader("input7.txt"));
+    BufferedReader br = new BufferedReader(new FileReader("input.txt"));
 
     String line;
     int countValidIPs = 0;

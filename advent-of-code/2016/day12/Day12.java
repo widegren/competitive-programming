@@ -5,7 +5,7 @@ public class Day12 {
   static HashMap<Character, Integer> map = new HashMap<Character, Integer>();
 
   public static void main(String[] args) throws IOException {
-    BufferedReader br = new BufferedReader(new FileReader("input12.txt"));
+    BufferedReader br = new BufferedReader(new FileReader("input.txt"));
     StringBuilder sb = new StringBuilder();
     String line, everything;
     int[][] screen = new int[6][50];

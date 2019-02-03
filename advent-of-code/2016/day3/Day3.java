@@ -6,7 +6,7 @@ public class Day3 {
   public static void main(String[] args) {
     String everything = "";
     try {
-      BufferedReader br = new BufferedReader(new FileReader("input3.txt"));
+      BufferedReader br = new BufferedReader(new FileReader("input.txt"));
       StringBuilder sb = new StringBuilder();
       String line = br.readLine();
 

@@ -2,7 +2,7 @@ import java.io.*;
 
 public class Day8 {
   public static void main(String[] args) throws Exception {
-    BufferedReader br = new BufferedReader(new FileReader("input8.txt"));
+    BufferedReader br = new BufferedReader(new FileReader("input.txt"));
     StringBuilder sb = new StringBuilder();
     String line, everything;
     int[][] screen = new int[6][50];
