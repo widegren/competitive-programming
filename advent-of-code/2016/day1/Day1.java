@@ -1,7 +1,14 @@
 import java.io.*;
 import java.util.*;
 
+/**
+ * Java solution for Advent of Code Day 1: No Time for a Taxicab
+ *
+ * @author Emelie Widegren <emeliewide@gmail.com>
+ */
 public class Day1 {
+
+  /** Directions that can be used in a sequence. */
   enum Direction {
     NORTH,
     SOUTH,
@@ -9,7 +16,8 @@ public class Day1 {
     WEST
   }
 
-  int findShortestPath(String[] parts) {
+  /** Calculate the shortest path to Easter Bunny HQ from given a sequence. */
+  private int findShortestPath(String[] parts) {
     int x = 0;
     int y = 0;
     Direction direction = Direction.NORTH;
@@ -57,7 +65,8 @@ public class Day1 {
     return Math.abs(x) + Math.abs(y);
   }
 
-  int firstRepeatedCoordinates(String[] parts) {
+  /** Calculate the distance to the first location visited twice */
+  private int firstRepeatedCoordinates(String[] parts) {
     Set<String> set = new HashSet<String>();
 
     int x = 0, y = 0;
@@ -141,10 +150,14 @@ public class Day1 {
     return Math.abs(x) + Math.abs(y);
   }
 
+  /**
+   * Read the input file and call findShortestPath to solve part one and firstRepeatedCoordinates to
+   * solve part two
+   */
   public static void main(String[] args) {
     String everything = "";
     try {
-      BufferedReader br = new BufferedReader(new FileReader("input1.txt"));
+      BufferedReader br = new BufferedReader(new FileReader("input.txt"));
       StringBuilder sb = new StringBuilder();
       String line = br.readLine();
 
@@ -161,6 +174,6 @@ public class Day1 {
     everything = everything.replaceAll("\\s+", "");
     String[] parts = everything.split(",");
     System.out.println(new Day1().findShortestPath(parts));
-    System.out.print(new Day1().firstRepeatedCoordinates(parts));
+    System.out.println(new Day1().firstRepeatedCoordinates(parts));
   }
 }
