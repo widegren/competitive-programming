@@ -1,5 +1,10 @@
 import java.io.*;
 
+/**
+ * Java solution for Advent of Code Day 8: Two-Factor Authentication
+ *
+ * @author Emelie Widegren <emeliewide@gmail.com>
+ */
 public class Day8 {
   public static void main(String[] args) throws Exception {
     BufferedReader br = new BufferedReader(new FileReader("input.txt"));

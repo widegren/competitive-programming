@@ -1,6 +1,11 @@
 import java.awt.*;
 import java.util.*;
 
+/**
+ * Java solution for Advent of Code Day 13: A Maze of Twisty Little Cubicles
+ *
+ * @author Emelie Widegren <emeliewide@gmail.com>
+ */
 public class Day13 {
   String[][] matrix;
   boolean[][] visited;

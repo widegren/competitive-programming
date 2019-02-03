@@ -1,6 +1,11 @@
 import java.io.*;
 import java.util.*;
 
+/**
+ * Java solution for Advent of Code Day 7: Internet Protocol Version 7
+ *
+ * @author Emelie Widegren <emeliewide@gmail.com>
+ */
 public class Day7 {
   public static void main(String[] args) throws Exception {
     BufferedReader br = new BufferedReader(new FileReader("input.txt"));

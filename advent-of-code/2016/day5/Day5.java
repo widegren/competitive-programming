@@ -1,3 +1,8 @@
+/**
+ * Java solution for Advent of Code Day 5: How About a Nice Game of Chess?
+ *
+ * @author Emelie Widegren <emeliewide@gmail.com>
+ */
 public class Day5 {
   public static void main(String[] args) {
     int result = 0, result2 = 0;

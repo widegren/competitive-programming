@@ -1,6 +1,11 @@
 import java.io.*;
 import java.util.HashMap;
 
+/**
+ * Java solution for Advent of Code Day 12: Leonardo's Monorail
+ *
+ * @author Emelie Widegren <emeliewide@gmail.com>
+ */
 public class Day12 {
   static HashMap<Character, Integer> map = new HashMap<Character, Integer>();
 

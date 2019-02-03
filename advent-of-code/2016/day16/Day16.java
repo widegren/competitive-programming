@@ -1,3 +1,8 @@
+/**
+ * Java solution for Advent of Code Day 16: Dragon Checksum
+ *
+ * @author Emelie Widegren <emeliewide@gmail.com>
+ */
 public class Day16 {
   private static final Integer DISC_LENGTH = 272;
   private static final Integer DISC_LENGTH_2 = 35651584;

@@ -2,6 +2,11 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 
+/**
+ * Java solution for Advent of Code Day 3: Squares With Three Sides
+ *
+ * @author Emelie Widegren <emeliewide@gmail.com>
+ */
 public class Day3 {
   public static void main(String[] args) {
     String everything = "";

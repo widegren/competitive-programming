@@ -1,5 +1,10 @@
 import java.util.*;
 
+/**
+ * Java solution for Advent of Code Day 19: An Elephant Named Joseph
+ *
+ * @author Emelie Widegren <emeliewide@gmail.com>
+ */
 public class Day19 {
   public static void main(String[] args) {
     int group = 3001330;

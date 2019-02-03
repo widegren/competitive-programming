@@ -2,6 +2,11 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 
+/**
+ * Java solution for Advent of Code Day 9: Explosives in Cyberspace
+ *
+ * @author Emelie Widegren <emeliewide@gmail.com>
+ */
 public class Day9 {
   public static void main(String[] args) {
     String everything = "";

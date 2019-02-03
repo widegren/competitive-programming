@@ -4,6 +4,11 @@ import java.util.HashMap;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+/**
+ * Java solution for Advent of Code Day 14: One-Time Pad
+ *
+ * @author Emelie Widegren <emeliewide@gmail.com>
+ */
 public class Day14 {
   private static final String salt = "ahsbgdzn";
   private static MessageDigest m;

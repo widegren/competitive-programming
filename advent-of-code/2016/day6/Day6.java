@@ -4,6 +4,11 @@ import java.io.IOException;
 import java.util.*;
 import java.util.Map.Entry;
 
+/**
+ * Java solution for Advent of Code Day 6: Signals and Noise
+ *
+ * @author Emelie Widegren <emeliewide@gmail.com>
+ */
 public class Day6 {
   public static void main(String[] args) {
     String everything = "";

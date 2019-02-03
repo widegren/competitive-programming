@@ -5,6 +5,11 @@ import java.util.*;
 import java.util.Map.Entry;
 import java.util.TreeMap;
 
+/**
+ * Java solution for Advent of Code Day 4: Security Through Obscurity
+ *
+ * @author Emelie Widegren <emeliewide@gmail.com>
+ */
 public class Day4 {
   public static void main(String[] args) {
     String everything = "";
