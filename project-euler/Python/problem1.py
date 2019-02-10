@@ -3,7 +3,7 @@
 Python solution for Project Euler Problem 1: Multiples of 3 and 5
 """
 __author__ = "Emelie Widegren"
-__email__ = "emeliewide@gmail.com"
+__email__ = "widegren.emelie@gmail.com"
 
 
 def multiples():
