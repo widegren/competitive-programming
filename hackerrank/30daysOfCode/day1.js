@@ -1,6 +1,6 @@
 /**
- * Javascript (Node.js) solution for {@link https://www.hackerrank.com/challenges/30-data-types/problem Day 1: Data Types}
- * @author Emelie Widegren <emeliewide@gmail.com>
+ * Javascript (Node.js) solution for {@link https://www.hackerrank.com/challenges/30-data-types/problem} Day 1: Data Types
+ * @author Emelie Widegren <widegren.emelie@gmail.com>
  */
 
 process.stdin.resume()

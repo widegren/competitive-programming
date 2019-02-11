@@ -1,3 +1,8 @@
+/**
+ * Javascript (Node.js) solution for {@link https://www.hackerrank.com/challenges/30-more-exceptions/problem} Day 17: More Exceptions
+ * @author Emelie Widegren <widegren.emelie@gmail.com>
+ */
+
 process.stdin.resume()
 process.stdin.setEncoding('ascii')
 

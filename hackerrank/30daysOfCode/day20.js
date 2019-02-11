@@ -1,53 +1,58 @@
-process.stdin.resume();
-process.stdin.setEncoding('ascii');
+/**
+ * Javascript (Node.js) solution for {@link https://www.hackerrank.com/challenges/30-sorting/problem} Day 20: Sorting
+ * @author Emelie Widegren <widegren.emelie@gmail.com>
+ */
 
-let input_stdin = '';
-let input_stdin_array = '';
-let input_currentline = 0;
+process.stdin.resume()
+process.stdin.setEncoding('ascii')
+
+let inputStdin = ''
+let inputStdinArray = ''
+let inputCurrentline = 0
 
 process.stdin.on('data', (data) => {
-  input_stdin += data;
-});
+  inputStdin += data
+})
 
 process.stdin.on('end', () => {
-  input_stdin_array = input_stdin.split('\n');
-  main();
-});
+  inputStdinArray = inputStdin.split('\n')
+  main()
+})
 
-function readLine() {
-  return input_stdin_array[input_currentline++];
+function readLine () {
+  return inputStdinArray[inputCurrentline++]
 }
 
 // ///////////// ignore above this line ////////////////////
 
-function main() {
-  const n = parseInt(readLine());
-  a = readLine().split(' ');
-  a = a.map(Number);
+function main () {
+  const n = parseInt(readLine())
+  let array = readLine().split(' ')
+  array = array.map(Number)
 
   // Write Your Code Here
-  let totalNumberOfSwaps = 0;
+  let totalNumberOfSwaps = 0
   for (let i = 0; i < n; i++) {
     // Track number of elements swapped during a single array traversal
-    let numberOfSwaps = 0;
+    let numberOfSwaps = 0
 
     for (let j = 0; j < n - 1; j++) {
       // Swap adjacent elements if they are in decreasing order
-      if (a[j] > a[j + 1]) {
-        const tmp = a[j];
-        a[j] = a[j + 1];
-        a[j + 1] = tmp;
-        numberOfSwaps++;
-        totalNumberOfSwaps++;
+      if (array[j] > array[j + 1]) {
+        const tmp = array[j]
+        array[j] = array[j + 1]
+        array[j + 1] = tmp
+        numberOfSwaps++
+        totalNumberOfSwaps++
       }
     }
 
     // If no elements were swapped during a traversal, array is sorted
-    if (numberOfSwaps == 0) {
-      break;
+    if (numberOfSwaps === 0) {
+      break
     }
   }
-  console.log(`Array is sorted in ${totalNumberOfSwaps} swaps.`);
-  console.log(`First Element: ${a[0]}`);
-  console.log(`Last Element: ${a[n - 1]}`);
+  console.log(`Array is sorted in ${totalNumberOfSwaps} swaps.`)
+  console.log(`First Element: ${array[0]}`)
+  console.log(`Last Element: ${array[n - 1]}`)
 }

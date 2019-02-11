@@ -1,8 +1,8 @@
 'use strict'
 
 /**
- * Javascript (Node.js) solution for {@link https://www.hackerrank.com/challenges/30-operators/problem Day 2: Operators}
- * @author Emelie Widegren <emeliewide@gmail.com>
+ * Javascript (Node.js) solution for {@link https://www.hackerrank.com/challenges/30-operators/problem} Day 2: Operators
+ * @author Emelie Widegren <widegren.emelie@gmail.com>
  */
 
 process.stdin.resume()

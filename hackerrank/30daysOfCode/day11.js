@@ -1,5 +1,10 @@
 'use strict'
 
+/**
+ * Javascript (Node.js) solution for {@link https://www.hackerrank.com/challenges/30-2d-arrays/problem} Day 11: 2D Arrays
+ * @author Emelie Widegren <widegren.emelie@gmail.com>
+ */
+
 process.stdin.resume()
 process.stdin.setEncoding('utf-8')
 

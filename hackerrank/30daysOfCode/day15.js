@@ -1,55 +1,55 @@
 /**
- * Javascript (Node.js) solution for {@link https://www.hackerrank.com/challenges/30-linked-list/problem Day 15: Linked List}
- * @author Emelie Widegren <emeliewide@gmail.com>
+ * Javascript (Node.js) solution for {@link https://www.hackerrank.com/challenges/30-linked-list/problem} Day 15: Linked List
+ * @author Emelie Widegren <widegren.emelie@gmail.com>
  */
 
-process.stdin.resume();
-process.stdin.setEncoding('ascii');
+process.stdin.resume()
+process.stdin.setEncoding('ascii')
 
-let input_stdin = '';
-let input_stdin_array = '';
-let input_currentline = 0;
+let inputStdin = ''
+let inputStdinArray = ''
+let inputCurrentline = 0
 
 process.stdin.on('data', (data) => {
-  input_stdin += data;
-});
+  inputStdin += data
+})
 
 process.stdin.on('end', () => {
-  input_stdin_array = input_stdin.split('\n');
-  main();
-});
-function readLine() {
-  return input_stdin_array[input_currentline++];
+  inputStdinArray = inputStdin.split('\n')
+  main()
+})
+function readLine () {
+  return inputStdinArray[inputCurrentline++]
 }
-function Node(data) {
-  this.data = data;
-  this.next = null;
+function Node (data) {
+  this.data = data
+  this.next = null
 }
-function Solution() {
+function Solution () {
   this.insert = function (head, data) {
     if (head === null) {
-      head = new Node(data);
+      head = new Node(data)
     } else {
-      head.next = this.insert(head.next, data);
+      head.next = this.insert(head.next, data)
     }
-    return head;
-  };
+    return head
+  }
 
   this.display = function (head) {
-    let start = head;
+    let start = head
     while (start) {
-      process.stdout.write(`${start.data} `);
-      start = start.next;
+      process.stdout.write(`${start.data} `)
+      start = start.next
     }
-  };
-}
-function main() {
-  const T = parseInt(readLine());
-  let head = null;
-  const mylist = new Solution();
-  for (let i = 0; i < T; i++) {
-    const data = parseInt(readLine());
-    head = mylist.insert(head, data);
   }
-  mylist.display(head);
+}
+function main () {
+  const T = parseInt(readLine())
+  let head = null
+  const mylist = new Solution()
+  for (let i = 0; i < T; i++) {
+    const data = parseInt(readLine())
+    head = mylist.insert(head, data)
+  }
+  mylist.display(head)
 }

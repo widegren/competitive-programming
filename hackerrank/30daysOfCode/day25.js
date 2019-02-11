@@ -1,6 +1,6 @@
 /**
- * Javascript (Node.js) solution for {@link https://www.hackerrank.com/challenges/30-running-time-and-complexity/problem Day 25: Running Time and Complexity}
- * @author Emelie Widegren <emeliewide@gmail.com>
+ * Javascript (Node.js) solution for {@link https://www.hackerrank.com/challenges/30-running-time-and-complexity/problem} Day 25: Running Time and Complexity
+ * @author Emelie Widegren <widegren.emelie@gmail.com>
  */
 
 function processData (input) {

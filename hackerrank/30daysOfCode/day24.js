@@ -1,6 +1,6 @@
 /**
- * Javascript (Node.js) solution for {@link https://www.hackerrank.com/challenges/30-linked-list-deletion/problem Day 24: More Linked Lists}
- * @author Emelie Widegren <emeliewide@gmail.com>
+ * Javascript (Node.js) solution for {@link https://www.hackerrank.com/challenges/30-linked-list-deletion/problem} Day 24: More Linked Lists
+ * @author Emelie Widegren <widegren.emelie@gmail.com>
  */
 
 process.stdin.resume()

@@ -1,5 +1,10 @@
 'use strict'
 
+/**
+ * Javascript (Node.js) solution for {@link https://www.hackerrank.com/challenges/30-inheritance/problem} Day 12: Inheritance
+ * @author Emelie Widegren <widegren.emelie@gmail.com>
+ */
+
 var _input = ''
 var _index = 0
 process.stdin.on('data', (data) => { _input += data })

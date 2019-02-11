@@ -1,3 +1,8 @@
+/**
+ * Javascript (Node.js) solution for {@link https://www.hackerrank.com/challenges/30-review-loop/problem} Day 6: Let's Review
+ * @author Emelie Widegren <widegren.emelie@gmail.com>
+ */
+
 function processData (input) {
   input = input.split('\n')
   var T = input[0]

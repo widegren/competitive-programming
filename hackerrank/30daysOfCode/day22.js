@@ -1,6 +1,6 @@
 /**
- * Javascript (Node.js) solution for {@link https://www.hackerrank.com/challenges/30-binary-search-trees/problem Day 22: Binary Search Trees}
- * @author Emelie Widegren <emeliewide@gmail.com>
+ * Javascript (Node.js) solution for {@link https://www.hackerrank.com/challenges/30-binary-search-trees/problem} Day 22: Binary Search Trees
+ * @author Emelie Widegren <widegren.emelie@gmail.com>
  */
 
 function Node (data) {

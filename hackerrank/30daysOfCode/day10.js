@@ -1,5 +1,10 @@
 'use strict'
 
+/**
+ * Javascript (Node.js) solution for {@link https://www.hackerrank.com/challenges/30-binary-numbers/problem} Day 10: Binary Numbers
+ * @author Emelie Widegren <widegren.emelie@gmail.com>
+ */
+
 process.stdin.resume()
 process.stdin.setEncoding('utf-8')
 

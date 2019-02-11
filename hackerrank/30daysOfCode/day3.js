@@ -1,8 +1,8 @@
 'use strict'
 
 /**
- * Javascript (Node.js) solution for {@link https://www.hackerrank.com/challenges/30-conditional-statements/problem Day 3: Intro to Conditional Statements}
- * @author Emelie Widegren <emeliewide@gmail.com>
+ * Javascript (Node.js) solution for {@link https://www.hackerrank.com/challenges/30-conditional-statements/problem} Day 3: Intro to Conditional Statements
+ * @author Emelie Widegren <widegren.emelie@gmail.com>
  */
 
 process.stdin.resume()

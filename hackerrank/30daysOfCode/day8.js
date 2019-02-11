@@ -1,3 +1,8 @@
+/**
+ * Javascript (Node.js) solution for {@link https://www.hackerrank.com/challenges/30-dictionaries-and-maps/problem} Day 8: Dictionaries and Maps
+ * @author Emelie Widegren <widegren.emelie@gmail.com>
+ */
+
 function processData (input) {
   input = input.split('\n')
   let T = input[0]
@@ -17,7 +22,7 @@ function processData (input) {
 
 process.stdin.resume()
 process.stdin.setEncoding('ascii')
-_input = ''
+let _input = ''
 process.stdin.on('data', function (input) {
   _input += input
 })

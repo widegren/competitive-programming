@@ -1,6 +1,6 @@
 /**
- * Javascript (Node.js) solution for {@link https://www.hackerrank.com/challenges/30-class-vs-instance/problem Day 4: Class vs. Instance}
- * @author Emelie Widegren <emeliewide@gmail.com>
+ * Javascript (Node.js) solution for {@link https://www.hackerrank.com/challenges/30-class-vs-instance/problem} Day 4: Class vs. Instance
+ * @author Emelie Widegren <widegren.emelie@gmail.com>
  */
 
 process.stdin.resume()
