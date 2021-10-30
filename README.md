@@ -11,9 +11,7 @@ My solutions to different programming problems, from different platforms:
 
 ## Milestones
 
-### 2019 Goals
+### 2021 Goals
 
-- [ ] 365 days of code.
-- [ ] 10 project euler problems in Scala. 
-- [ ] 10 project euler problems in Hasell.
-- [ ] 10 project euler problems in Rust.
+- [ ] Finish advent of code 2020
+- [ ] Finish advent of code 2021
